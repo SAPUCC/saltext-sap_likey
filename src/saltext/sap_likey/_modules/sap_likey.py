@@ -4,7 +4,7 @@ Copyright (C) 2022 SAP UCC Magdeburg
 
 saplikey execution module
 =========================
-SaltStack execution module that wraps saplikey functions.
+SaltStack execution module that wraps ``saplikey`` functions.
 
 :codeauthor:    Benjamin Wegener, Alexander Wilke
 :maturity:      new
@@ -42,7 +42,7 @@ def __virtual__():
 
 def _get_saplikey_path(sidadm):
     """
-    Retrieve the path to the saplikey
+    Retrieve the path to the ``saplikey`` binary
     """
     dir_library = __salt__["cmd.shell"](cmd="echo $DIR_LIBRARY", runas=sidadm)
     if not dir_library or "/" not in dir_library:
@@ -53,7 +53,7 @@ def _get_saplikey_path(sidadm):
 # pylint: disable=unused-argument
 def info(sid, **kwargs):
     """
-    Wrapper for the saplikey function "get". Retrieves system license information.
+    Wrapper for the saplikey function ``get``. Retrieves system license information.
 
     sid
         SID of the SAP NetWeaver systems.
@@ -96,7 +96,7 @@ def info(sid, **kwargs):
 # pylint: disable=unused-argument
 def show(sid, **kwargs):
     """
-    Wrapper for the saplikey function "show". Retrieves all SAP licenses.
+    Wrapper for the saplikey function ``show``. Retrieves all SAP licenses.
 
     sid
         SID of the SAP NetWeaver systems.
@@ -145,7 +145,7 @@ def show(sid, **kwargs):
 # pylint: disable=unused-argument
 def install(sid, filename, **kwargs):
     """
-    Wrapper for the saplikey function "install". Install SAP licenses from a file.
+    Wrapper for the saplikey function ``install``. Install SAP licenses from a file.
 
     sid
         SID of the SAP NetWeaver systems.
@@ -181,7 +181,7 @@ def install(sid, filename, **kwargs):
 # pylint: disable=unused-argument
 def delete(name, sid, hwkey="*", product="*", **kwargs):
     """
-    Wrapper for the saplikey function "delete". Delete SAP licenses.
+    Wrapper for the saplikey function ``delete``. Delete SAP licenses.
 
     name
         Name of the license to delete. This is the SID of the system for which the license
@@ -227,7 +227,7 @@ def delete(name, sid, hwkey="*", product="*", **kwargs):
 # pylint: disable=unused-argument
 def temp(sid, product, **kwargs):
     """
-    Wrapper for the saplikey function "temp". Installs a temporary SAP license.
+    Wrapper for the saplikey function ``temp``. Installs a temporary SAP license.
 
     sid
         SID of the SAP NetWeaver systems.
@@ -269,6 +269,7 @@ def read_lic_file(filename, **kwargs):
     """
     Reads a SAP license file and returns a dictionary with information, e.g. a text file
     with:
+
     .. code-block:: ini
 
         SAPSYSTEM=ZZZ
