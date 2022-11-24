@@ -4,7 +4,7 @@ Copyright (C) 2022 SAP UCC Magdeburg
 
 SAP NetWeaver AS ABAP License Key state module
 ==============================================
-SaltStack module that implements states based on saplikey functionality.
+SaltStack module that implements states based on ``saplikey`` functionality.
 
 :codeauthor:    Benjamin Wegener, Alexander Wilke
 :maturity:      new
@@ -29,7 +29,7 @@ __virtualname__ = "sap_likey"
 # pylint: disable=unused-argument
 def license_present(name, filename=None, remove_other_sid=True, remove_other_hwkey=True, **kwargs):
     """
-    Ensure that the license keys defined in a file are present in the system
+    Ensure that the license keys defined in a file are present in the system.
 
     name
         SID of the SAP system.
